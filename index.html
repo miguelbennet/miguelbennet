@@ -364,3 +364,37 @@
     Entrar no servidor do QØN 💜
   </button>
 </div>
+
+    <div class="copyright">
+     <p id="copyright-text">💜 © 2024 Miguel Bennet. Todos os direitos reservados. 💜</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Criar estrelas
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const numberOfStars = 150;
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        
+        if (Math.random() > 0.7) star.classList.add('purple');
+        if (Math.random() > 0.8) star.classList.add('large');
+        
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        
+        starsContainer.appendChild(star);
+      }
+    }
+
+    createStars();
+  </script>
+ </body>
+</html>
+
